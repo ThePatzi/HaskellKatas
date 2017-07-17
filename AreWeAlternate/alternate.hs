@@ -14,7 +14,7 @@ isAlt (c : rest)
           | otherwise                         = False
         check [] _ = True
 
-isAlt [] = False
+isAlt [] = True
 
 
 main :: IO()
@@ -27,7 +27,7 @@ tests = TestList $ map TestCase
     assertEqual "Run isAlt with 'banana'" True (isAlt "banana"),
     assertEqual "Run isAlt with 'apple'" False (isAlt "apple"),
     assertEqual "Run isAlt with 'amazon'" True (isAlt "amazon"),
-    assertEqual "Run isAlt with ''" False (isAlt "")
+    assertEqual "Run isAlt with ''" True (isAlt "")
   ]
 
 prop_empty :: Int -> Bool
