@@ -1,0 +1,1 @@
+[Task](https://www.codewars.com/kata/are-we-alternate)
