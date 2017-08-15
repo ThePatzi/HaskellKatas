@@ -5,8 +5,7 @@ import           Test.HUnit
 import           Test.QuickCheck
 
 yourOrderPlease :: String -> String
-yourOrderPlease str = unwords $ sortOn getOrder (words str)
-  where getOrder i = fromMaybe '0' (find isDigit i)
+yourOrderPlease str = unwords $ sortOn (find isDigit) (words str)
 
 main :: IO()
 main = runTests
